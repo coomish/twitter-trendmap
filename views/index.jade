@@ -1,0 +1,49 @@
+doctype html
+html(ng-app="trendMap")
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Automatic Gender Detection of Twitter Users
+        link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css')
+        link(rel='stylesheet', href='assets/styles.css')
+
+        style.
+            html {
+                overflow-y: scroll;
+            }
+
+            body {
+                padding-top: 50px;
+            }
+
+            #profile-list {
+                margin-bottom: 30px;
+            }
+
+            #profile-form {
+                margin-bottom: 50px;
+            }
+
+        script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js')
+        script(src='//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js')
+        script(src='js/core.js')
+        // load our main application
+        // load angular
+        script(src='js/controllers/main.js')
+        // load up  controller
+        script(src='js/services/profiles.js')
+
+    body
+        .container(ng-controller="mainCtrl as vm")
+            p
+                h2 Twitter Trend map
+            br
+
+            .container
+                
+                .panel
+                    .panel-body
+                        div
+                            h1 {{twitterdata.twitter_profile.name}}
+                            br
+                        
