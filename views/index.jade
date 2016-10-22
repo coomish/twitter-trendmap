@@ -3,7 +3,7 @@ html(ng-app="trendMap")
     head
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1')
-        title Automatic Gender Detection of Twitter Users
+        title Twitter Trend detection
         link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css')
         link(rel='stylesheet', href='assets/styles.css')
 
@@ -23,7 +23,11 @@ html(ng-app="trendMap")
             #profile-form {
                 margin-bottom: 50px;
             }
+            #mapid { height: 180px; width:150px;     }
 
+        link(rel='stylesheet', href='https://unpkg.com/leaflet@1.0.1/dist/leaflet.css')
+        script(src='https://unpkg.com/leaflet@1.0.1/dist/leaflet.js')
+        script(src='https://code.highcharts.com/highcharts.js')        
         script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js')
         script(src='//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js')
         script(src='js/core.js')
@@ -32,6 +36,8 @@ html(ng-app="trendMap")
         script(src='js/controllers/main.js')
         // load up  controller
         script(src='js/services/profiles.js')
+        
+
 
     body
         .container(ng-controller="mainCtrl as vm")
@@ -40,10 +46,11 @@ html(ng-app="trendMap")
             br
 
             .container
-                
                 .panel
                     .panel-body
                         div
-                            h1 {{twitterdata.twitter_profile.name}}
+                            h1 {{test}}
                             br
-                        
+                            #highchartCont Placeholder for chart
+                            #highmapCont Placeholder for map
+                            #mapid

@@ -1,5 +1,5 @@
 {
-  "name": "Twitter Trendmap",
+  "name": "twitter-trends",
   "version": "0.0.1",
   "description": "Web UI for Twitter Trendmap",
   "main": "server.js",
@@ -12,6 +12,7 @@
     "express": "^4.14.0",
     "gulp": "^3.9.1",
     "gulp-pug": "^3.0.3",
+    "highcharts-ng": "0.0.13",
     "jade": "^1.11.0",
     "method-override": "^2.3.6",
     "mongoose": "~3.8.13",
